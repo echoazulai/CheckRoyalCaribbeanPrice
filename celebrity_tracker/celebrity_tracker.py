@@ -614,7 +614,7 @@ def print_summary(conn: sqlite3.Connection, min_nights: int = 7, new_sailings: i
     rows = cur.fetchall()
     if rows:
         for i, (ship, date, nights, cabin, gty, pp, ppn) in enumerate(rows, 1):
-            gty_tag = " GTY" if gty else ""
+            gty_tag = " GTY" if gty and "gty" not in cabin.lower() else ""
             nights_str = f"{nights} nights" if nights else "? nights"
             ppn_str = f" | £{ppn:,}/night" if ppn else ""
             print(f"  {i:2}. {ship} | {date} | {nights_str} | {cabin}{gty_tag} | £{pp:,.0f} pp{ppn_str}")
