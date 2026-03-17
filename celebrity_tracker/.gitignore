@@ -1,0 +1,4 @@
+# SQLite database files (created automatically at runtime)
+*.db
+*.db-shm
+*.db-wal
