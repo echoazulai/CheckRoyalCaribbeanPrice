@@ -1,0 +1,41 @@
+# Celebrity Cruises UK Price Tracker — Configuration
+# =====================================================
+# Edit this file to customise the tracker, then run:
+#   python celebrity_tracker.py
+
+# Currency for all prices (GBP = British Pounds)
+currency: "GBP"
+
+# Country code used when querying the API.
+# GB = United Kingdom (recommended for UK pricing)
+country: "GB"
+
+# Number of adult passengers per cabin (used for total price calculations)
+passengers: 2
+
+# Minimum sailing duration in nights.
+# Sailings shorter than this will be ignored.
+min_nights: 7
+
+# Leave as "celebrity" — this is the cruise line the tool tracks.
+cruise_line: "celebrity"
+
+# Optional: restrict tracking to specific ships by (partial) name.
+# Uncomment and edit the list below to track only certain ships.
+# Leave empty (or commented out) to track ALL Celebrity ships.
+#
+# ship_filter:
+#   - "Edge"
+#   - "Apex"
+#   - "Beyond"
+#   - "Ascent"
+#   - "Solstice"
+#   - "Equinox"
+#   - "Reflection"
+#   - "Silhouette"
+
+# Optional: ignore cabin prices above this per-person amount.
+# Useful to avoid storing extremely expensive ultra-luxury categories.
+# Commented out = no upper limit.
+#
+# max_price_pp: 10000
